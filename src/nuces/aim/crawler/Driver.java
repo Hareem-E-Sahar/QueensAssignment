@@ -13,7 +13,6 @@ public class Driver {
 		
 		//Crawling Jira
 		JiraCrawler obj = new JiraCrawler();
-	    //Data dataList =;
 		Data data=obj.crawlJira();
 		FileHandler.generateCSV(data);
 		
