@@ -1,6 +1,5 @@
 package nuces.aim.crawler.jira;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -34,33 +33,6 @@ public class JiraCrawler {
 		List<WebElement> date=driver.findElements(By.className("dates"));
 		List<WebElement> comments=driver.findElements(By.className("issuePanelContainer"));
 		
-		
-/*		List<String> typeText = new ArrayList<String>(0);
-		List<String> assigneeText = new ArrayList<String>(0);
-		List<String> descriptionText = new ArrayList<String>(0);
-		List<String> dateText = new ArrayList<String>(0);
-		List<String> commentsText = new ArrayList<String>(0); 
-		
-		for(int i=0;i<bugType.size();i++){
-			typeText.add(bugType.get(i).getText());
-		}
-		
-		for(int i=0;i<assignee.size();i++){
-			assigneeText.add(assignee.get(i).getText());
-		}
-		
-		for(int i=0;i<description.size();i++){
-			descriptionText.add(description.get(i).getText());
-		}
-		
-		for(int i=0;i<date.size();i++){
-			dateText.add(date.get(i).getText());
-		}
-		
-		for(int i=0;i<comments.size();i++){
-			commentsText.add(comments.get(i).getText());
-		}
-	*/	
 		//Prints
 		Data data=new Data();
 	//	for(int i=0;i<bugType.size();i++)
