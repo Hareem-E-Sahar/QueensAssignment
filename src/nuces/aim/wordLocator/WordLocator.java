@@ -49,9 +49,12 @@ public void setWord(char[] word) {
 	this.word = word;
 }
 //
-public boolean findWord(char [][] array, int row, int col, String word, int siz)
+public boolean findWord(char [][] array, String word)
 {
 
+	int row=array.length;
+	int col=array[0].length;
+	int siz=word.length();
 	int count=0;				//counts number of matches
 	boolean flag=false;
 	for(int i=0; i<row; i++)	//horizontal traversal of array
@@ -66,7 +69,7 @@ public boolean findWord(char [][] array, int row, int col, String word, int siz)
 				temp.col=j;
 				matchingIndex[0]=temp;	   //save the location of first match
 				
-				//System.out.println("Index of Ist match:"+i+" "+j);
+			//	System.out.println("Index of Ist match:"+i+" "+j);
 				
 				count=remainingMatches(array, row, col,word,siz);		//count number of matches in string other than ist char
 				
@@ -95,11 +98,11 @@ boolean checkAdjacentCell(char [][]array,String word, int rowIndex, int colIndex
 	Cell temp=new Cell();
 	if( word.charAt(currLoc)==array[rowIndex][colIndex] && (!visited[rowIndex][colIndex]))
 	{
-		//System.out.println("value at next location:"+word.charAt(currLoc)+" "+array[rowIndex][colIndex]);
+	//	System.out.println("value at next location:"+word.charAt(currLoc)+" "+array[rowIndex][colIndex]);
 		temp.row=rowIndex;
 		temp.col=colIndex;
 		matchingIndex[currLoc]=temp; 
-		//System.out.println("Index of next match:"+matchingIndex[currLoc].row+" "+ matchingIndex[currLoc].col);
+	//	System.out.println("Index of next match:"+matchingIndex[currLoc].row+" "+ matchingIndex[currLoc].col);
 		System.out.println();
 		//count++;
 		visited[rowIndex][colIndex]=true;

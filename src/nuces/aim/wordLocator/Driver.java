@@ -4,16 +4,12 @@ public class Driver {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		char [][] array=new char[10][10];
-		int m=4;int n=4;
+		char [][] array=new char[3][4];
 		
-		String firstword="ABCCED";
+		String firstword="FCEDA";
 		String secondword="SEE";
 		String thirdword="ABCB";
-		
-		//int siz=firstword.length;
-		//int siz=secondword.length;
-		int siz=thirdword.length();
+	
 				
 		array[0][0]='A';
 		array[0][1]='B';
@@ -33,12 +29,8 @@ public class Driver {
 		
 		
 		WordLocator obj = new WordLocator();
-		/*System.out.print("Word:");
-		for(int i=0;i<4;i++)
-			System.out.println(word[i]);*/
-		
-	boolean b=obj.findWord(array, m, n, thirdword, siz);
-	System.out.println("Result:"+b);
+		boolean b=obj.findWord(array, firstword);
+		System.out.println("Result:"+b);
 		
 		
 	}
